@@ -37,6 +37,7 @@ def calculate_priorities(features, total_point):
 
     # The matrix is normalized according to axis 0
     normed_matrix = normalize(ahp_matrix, axis=0, norm='l1')
+    print("Normlized matrix:",normed_matrix)
 
     # Weights are calculated
     weights = normed_matrix.mean(1)
@@ -49,10 +50,57 @@ def calculate_priorities(features, total_point):
 
 
 
-
-critetia = [['Price', 'Reputation', 'Location', 'Security','Campus'], [4, 3, 2,5,1]]
+#calculating the creteria priorities
+critetia = [['Price', 'Reputation', 'Location', 'Security','Campus'], [6, 4, 9,6]]
 total_point = 1
 print(critetia)
 main_dict = print(calculate_priorities(critetia, total_point))
 main_dict
+
+#calculating the price criterion for the decision alaternatives
+price_cr = [['UB','BIUST','BUAN','BOTHO'],[4,5,7]]
+print(price_cr)
+Price_=print(calculate_priorities(price_cr, total_point))
+Price_
+
+#calculating the reputation criterion for the decision alaternatives
+reputation_cr = [['BOTHO','BUAN','BIUST','UB'],[1,5,5]]
+print(reputation_cr)
+reputation_ = print(calculate_priorities(reputation_cr, total_point))
+reputation_
+
+#calculating the location criterion for the decision alaternatives
+location_cr = [['UB','BOTHO','BUIST','BUAN'],[1,3,2]]
+print(location_cr)
+location_ = print(calculate_priorities(location_cr, total_point))
+location_
+
+#calculating the security criterion for the decision alaternatives
+security_cr = [['BOTHO','UB','BIUST','BUAN'],[4,2,5]]
+print(security_cr)
+security_ = print(calculate_priorities(security_cr, total_point))
+security_
+
+
+#calculating the campus criterion for the decision alaternatives
+campus_cr = [['UB','BIUST','BUAN','BOTHO'],[2,3,6]]
+print(campus_cr)
+campus_ = print(calculate_priorities(campus_cr, total_point))
+campus_
+
+
+#combining it all now
+df = pd.DataFrame([price_cr,reputation_cr,location_cr,security_cr,campus_cr])
+df.index = main_dict.keys()
+df
+
+#summing the results to obtain the total points
+total = df.sum()
+total.name = 'Total'
+df =pd.concat([df,total.to_frame().T])
+df
+
+
+
+
 
