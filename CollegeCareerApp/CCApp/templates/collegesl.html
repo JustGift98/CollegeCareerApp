@@ -1,0 +1,63 @@
+{%extends 'template.html'%}
+
+{%block content%}
+
+<form method='POST' action='/ahp/ahp-calc.php?n=3&t=AHP+priorities&c[0]=Crit-1&c[1]=Crit-2&c[2]=Crit-3'><div class='ofl'>
+                <table id='cri'><thead><tr class='header'>
+                    <th colspan='3' class='ca' >A - wrt <span class='var'>AHP priorities</span> - or B?</th>
+                    <th>Equal</th>
+                    <th class='ca' >How much more?</th></tr></thead>
+<tbody>
+<tr><td class='ca'  >1</td><td><span >
+                <input class='onclk1' type='radio' name='A[0]' value='0' checked/></span><label> Crit-1</label></td><td><span  >
+                <input class='onclk1' type='radio' name='A[0]' value='1'></span><label>Crit-2</label></td><td class='ac' style='font-size:smaller;'><span ><input type='radio' class='onclk1' name='Intense[0]'
+                value='1' checked><label>1</label></span></td><td class='ca' style='min-width:250px;font-size:smaller;' ><span ><input type='radio' class='onclk1' name='Intense[0]'
+                value='2'><label>2</label></span><span ><input type='radio' class='onclk1' name='Intense[0]'
+                value='3'><label>3</label></span><span ><input type='radio' class='onclk1' name='Intense[0]'
+                value='4'><label>4</label></span><span ><input type='radio' class='onclk1' name='Intense[0]'
+                value='5'><label>5</label></span><span ><input type='radio' class='onclk1' name='Intense[0]'
+                value='6'><label>6</label></span><span ><input type='radio' class='onclk1' name='Intense[0]'
+                value='7'><label>7</label></span><span ><input type='radio' class='onclk1' name='Intense[0]'
+                value='8'><label>8</label></span><span ><input type='radio' class='onclk1' name='Intense[0]'
+                value='9'><label>9</label></span></td></tr>
+<tr><td class='ca'  >2</td><td><span >
+                <input class='onclk1' type='radio' name='A[1]' value='0' checked/></span><label> Crit-1</label></td><td><span  >
+                <input class='onclk1' type='radio' name='A[1]' value='1'></span><label>Crit-3</label></td><td class='ac' style='font-size:smaller;'><span ><input type='radio' class='onclk1' name='Intense[1]'
+                value='1' checked><label>1</label></span></td><td class='ca' style='min-width:250px;font-size:smaller;' ><span ><input type='radio' class='onclk1' name='Intense[1]'
+                value='2'><label>2</label></span><span ><input type='radio' class='onclk1' name='Intense[1]'
+                value='3'><label>3</label></span><span ><input type='radio' class='onclk1' name='Intense[1]'
+                value='4'><label>4</label></span><span ><input type='radio' class='onclk1' name='Intense[1]'
+                value='5'><label>5</label></span><span ><input type='radio' class='onclk1' name='Intense[1]'
+                value='6'><label>6</label></span><span ><input type='radio' class='onclk1' name='Intense[1]'
+                value='7'><label>7</label></span><span ><input type='radio' class='onclk1' name='Intense[1]'
+                value='8'><label>8</label></span><span ><input type='radio' class='onclk1' name='Intense[1]'
+                value='9'><label>9</label></span></td></tr>
+<tr><td colspan='5'></td></tr>
+<tr><td class='ca'  >3</td><td><span >
+                <input class='onclk1' type='radio' name='A[2]' value='0' checked/></span><label> Crit-2</label></td><td><span  >
+                <input class='onclk1' type='radio' name='A[2]' value='1'></span><label>Crit-3</label></td><td class='ac' style='font-size:smaller;'><span ><input type='radio' class='onclk1' name='Intense[2]'
+                value='1' checked><label>1</label></span></td><td class='ca' style='min-width:250px;font-size:smaller;' ><span ><input type='radio' class='onclk1' name='Intense[2]'
+                value='2'><label>2</label></span><span ><input type='radio' class='onclk1' name='Intense[2]'
+                value='3'><label>3</label></span><span ><input type='radio' class='onclk1' name='Intense[2]'
+                value='4'><label>4</label></span><span ><input type='radio' class='onclk1' name='Intense[2]'
+                value='5'><label>5</label></span><span ><input type='radio' class='onclk1' name='Intense[2]'
+                value='6'><label>6</label></span><span ><input type='radio' class='onclk1' name='Intense[2]'
+                value='7'><label>7</label></span><span ><input type='radio' class='onclk1' name='Intense[2]'
+                value='8'><label>8</label></span><span ><input type='radio' class='onclk1' name='Intense[2]'
+                value='9'><label>9</label></span></td></tr>
+<tr><td colspan='5'></td></tr>
+<tr><td class='sm' colspan='5'> CR = <span class='res'>0% </span><span class='msg'>Please start pairwise comparison</span></td></tr><tr><td colspan='2' class='la'><input id='sbm1'  type='submit' value='Calculate' name='pc_submit' /></td><td colspan='2'><td class='ca'></td></tr>
+</tbody>
+</table></div>
+</form><p style='font-size:small'>AHP Scale: 1- Equal Importance, 3- Moderate importance,
+ 								5- Strong importance, 7- Very strong importance, 9- Extreme importance
+ 								(2,4,6,8 values in-between).</p><form method='POST' action='/ahp/ahp-calc.php'>
+<fieldset><legend>AHP Priority Calculator</legend>
+<div style='float:right'>
+	<input type='submit' value=Done name='DONE' >
+</div>
+</fieldset>
+</form>
+
+{%endblock%}
+
