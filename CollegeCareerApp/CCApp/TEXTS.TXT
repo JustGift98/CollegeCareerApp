@@ -1,0 +1,14 @@
+"subCriteria:critA": [
+      [1, 1],
+      [1, 1]
+    ],
+    "alternatives:subCritA": [
+      [1, 1, 1],
+      [1, 1, 1],
+      [1, 1, 1]
+    ],
+    "alternatives:subCritB": [
+      [1, 1, 1],
+      [1, 1, 1],
+      [1, 1, 1]
+    ],

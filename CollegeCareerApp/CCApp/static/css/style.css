@@ -1,0 +1,207 @@
+body {
+    background-color: grey;
+    padding: 1;
+    margin: 1;
+    box-sizing: border-box;
+
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    width: 600px;
+    height: 500px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.split {
+  height: 90%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: grey;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.removeParent {
+	margin-left: 1em;
+}
+
+.pollVoteLink {
+	margin-left: .5em;
+	margin-right: .5em;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+td.pollQuestion {
+	border: 1px solid silver;
+	text-align: center;
+	padding-top: .20px;
+	padding-bottom: .20px;
+}
+
+#pollResults td.titleRow{
+	font-weight: bold;
+	border-bottom: 1px solid silver;
+}
+
+div#pollQuestions, div#pollResults {
+}
+
+td.green {
+	border-top: 1px solid silver;
+	background-color: lime;
+}
+
+td.orange {
+	border-top: 1px solid silver;
+	background-color: orange;
+}
+
+#pollResults table {
+	margin-bottom: 2em;
+	border: 1px solid silver;
+}
+
+
+#pollResults table.current {
+	border: 2px dashed orange;
+}
+
+.questionIndex {
+	font-size: 90%;
+	color: gray;
+	font-style: italic;
+}
+
+table{
+	width: ;
+}
+
+.resultColumnTitle td {
+	border-bottom: 1px solid silver;
+	vertical-align: bottom;
+}
+
+.resultScaleFactor {
+	padding-right: .3em;
+}
+
+h3 {
+	background-color: blue;
+	color: white;
+	padding: .3em;
+	text-align: left;
+}
+
+lable {
+	display: block;
+}
+
+.setup {
+	margin-bottom: 2em;
+}
+
+.questionTextDisplay{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.pollQuestionTitle {
+	text-align: center;
+	padding: .5em;
+}
+
+#pollQuestions {
+	text-align: center;
+}
+
+#pollQuestions table{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 4em;
+	margin-bottom: .5em;
+}
+
+.simplePollButtons input{
+	margin-left: .5em;
+	margin-right: .5em;
+	padding-left: .5em;
+	padding-right: .5em;
+}
+
+fieldset {
+	margin-bottom: 1em;
+	padding: 1em;
+	border: 1px solid silver;
+}
+
+legend {
+	background-color: white;
+	margin-left: .3em;
+	font-weight: bold;
+}
+
+#optionsList {
+	margin-bottom: 1em;
+}
+
+.detailedPollButtons input{
+	padding-left: .5em;
+	padding-right: .5em;
+}
+
+.votingOptions li{
+	margin-left: -3em;
+}
+
+.votingOptions li{
+	list-style: none;
+	margin-bottom: 1em;
+
+}
+
+fieldset img {
+	margin-left: 7em;
+	margin-top: .3em;
+}
