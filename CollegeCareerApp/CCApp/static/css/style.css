@@ -58,6 +58,7 @@ body {
 .centered img {
   width: 150px;
   border-radius: 50%;
+<<<<<<< HEAD
 }
 
 .removeParent {
@@ -205,3 +206,6 @@ fieldset img {
 	margin-left: 7em;
 	margin-top: .3em;
 }
+=======
+}
+>>>>>>> origin/master
