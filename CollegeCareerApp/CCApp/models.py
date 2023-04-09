@@ -11,8 +11,7 @@ class GradStudent(models.Model):
 
               )
 
-    fname = models.CharField(max_length=50)
-    lname = models.CharField(max_length=50)
+    username = models.CharField(max_length=100)
     email = models.EmailField(max_length=100, primary_key=True)
     DOB = models.DateField()
     password = models.CharField(max_length=100)

@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.contrib.auth import authenticate
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import SignUpForm
+
 
 
 # homepage when accessing the site before signing up or logging in
@@ -12,20 +14,31 @@ def home(request):
 def login(request):
     return render(request, 'login.html', {})
 
-
-# the sign up or registration page
-def signup(request):
-    if request.method == "POST":
-        form = SignUpForm(request.POST or None)
+def signup(response):
+    if response.method == 'POST':
+        form = SignUpForm(response.POST)
         if form.is_valid():
-            form.save()
-            messages.success(request, ('You have been successfully signed up'))
-        return render(request, 'signup.html', {})
+            user = form.save()
 
+
+            # redirect user to home page
+            return redirect('dashboard.html')
     else:
-        return render(request, 'signup.html', {})
+        form = SignUpForm()
+    return render(response, 'signup.html', {'form': form})
+
 
 
 # the page user interacts with after being logged in
 def dashboard(request):
     return render(request, 'dashboard.html', {})
+
+
+def profile(request):
+    return render(request, 'profile.html', {})
+
+def college(request):
+    return render(request, 'collegesl.html', {})
+
+def program(request):
+    return render(request, 'studyprogram.html', {})

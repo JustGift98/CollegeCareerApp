@@ -151,3 +151,7 @@ SITE_ID = 2
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+#logging and loggour redirect
+LOGIN_REDIRECT_URL = "dashboard/"
+LOGOUT_REDIRECT_URL = "/"

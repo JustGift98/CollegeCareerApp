@@ -1,10 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'template.html' %}
 
-</body>
-</html>
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<div class="container">
+		<div class="criteria">
+			<h2>Program Criteria Selection</h2>
+			<div>
+				<label for="criteria">Criteria:</label>
+				<input type="text" id="criteria" name="criteria">
+			</div>
+			<div>
+				<label for="weight">Weight:</label>
+				<input type="text" id="weight" name="weight">
+			</div>
+			<button type="button" id="add-criteria">Add Criteria</button>
+			<table id="criteria-table">
+				<thead>
+					<tr>
+						<th>Criteria</th>
+						<th>Weight</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<div class="alternatives">
+			<h2>Selection of Alternatives</h2>
+			<div>
+				<label for="alternative">Alternative:</label>
+				<input type="text" id="alternative" name="alternative">
+			</div>
+			<div>
+				<label for="importance-list">Importance List:</label>
+				<table id="importance-list">
+					<thead>
+						<tr>
+							<th>Criteria</th>
+							<th>Importance</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+			<button type="button" id="add-alternative">Add Alternative</button>
+			<table id="alternatives-table">
+				<thead>
+					<tr>
+						<th>Alternative</th>
+						<th>Score</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>--</td>
+						<td>--</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="consistency-ratios">
+			<h2>Consistency Ratios</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Criteria</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+</div>
+
+{% endblock %}
